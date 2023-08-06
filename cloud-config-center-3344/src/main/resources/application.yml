@@ -1,0 +1,92 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name:  cloud-config-center #注册进Eureka服务器的微服务名
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/EmpressBoost/springcloud-config.git #GitHub上面的git仓库名字
+#          uri: git@github.com:EmpressBoost/springcloud-config.git #GitHub上面的git仓库名字
+          ####搜索目录
+          search-paths:
+            - springcloud-config
+#          strict-host-key-checking: false
+#          private-key: |
+#            -----BEGIN RSA PRIVATE KEY-----
+#            MIIJJwIBAAKCAgEAo726qfE8892N+7/+w2a7Kp/A9zY7jRTswQsEdDKjRPATp/nR
+#            p4P8xOsmaPs8LlsMBHPJPusuAqAdqbA9Rd+e9P4Qri6jVdvpQhkI66EbdpKG0uSS
+#            sIpZ38LRp5LwrbRtGUUCzNaFbap2eLAB5zCdlRk42Bot6dQUqeeyyBuwmBWKKf6h
+#            cJ53C6ixEqLnXCUntx0SW/pTNILlR/Y0laWXMonyjvDGA2wVzdxokrFDWpgpM8H5
+#            BmyL/I8/REUG+zEElxnP4g8K3El2jkTQD3DC/dmt8B1eH9TpSYcVTBSk8xIN8CfS
+#            H0HR5/0GZU6lFJQTxwGyCZWjpukbXAvjuOBLjnXnVdGGEwngNVAnuyyW+FlmQQXs
+#            nAwsFrkigsOeO+G4u0Rrf0g/tulCLCsRxPGlmjohrJ45G01VNUmDx49T6WE7EtGJ
+#            u4zXmgZs8+HHzO69lVXblRyuGWZ84z8LYfRMBswL0Je4whd+7T/mbirOo5+9x1SE
+#            2MGupUJh+kPNIuCk2KA+wDs9pyaO3wjZOwJ5wCOzCWlhOp1me/i2ltDBqUdAioLx
+#            D+ADToJ4fu9DWEoesIq7sWzEre7NEbj7rxB02BgRxs6bu62jmGOp6SF5BpW/U7wX
+#            zJbZHyngwDBxON4mQbOx0J1UHTIkfo6jM9D2dLZPope8xxpf4E3oFbAdYXsCAwEA
+#            AQKCAgA48drhD0yrYvnl+7eWLTwabsSlNO8w+X39BN/fqVyutO+hE3ieUYCu2zjY
+#            ecdMN83OHpZ2k0PFFfo68Vfd3Q9jFJioev/C9GAC5MH9cGIksoDBB00cqIDpGM/g
+#            /3FEd+MZTq7Snih5IzdgcZW32Wh0Wfky7qfZEjC9hh7fCQI5YgRS5oMur22nWFt8
+#            p7reiO1u+WVRJ5WYRY2HoVBYWuZiZSc+Hu4+cnCCz4xut8c80n5BycvZOBbXFtph
+#            27+5zCpUgl2RuLmGMuZQRA430Hd/4RxkzVHWsC0RrTDy7JsRDc5bHv4scK+Xhp+a
+#            y+cNaRIXu7c3LhtkCN3C/T+NJDQiIMVMKlxwEwgc7WafwE9M6oUy5eXb3TzfStEI
+#            szl04DK+ProFFnYcrwBelbr9IvWc+aYZUF4CKRPBRbY4cxaq9IEQYOedciUqpn5/
+#            zEbcPd75z8echB+IDnwJv8H8GpJNCJoLTtJy64tsyn2CDHoapM2B8DOnozUPYUjK
+#            vQhVoIymga+00wVk/xtvcE4zNyETdTcv2/7N5SHCQ8MaJZLwgbkpNy2Pq0KsV/Sx
+#            EsGSG09cDEot4Yb5GId9+VZHnB//lhkQp9LRh73+GHpcmqUaRoc5YtntWQiHT/aD
+#            agazHnLh0eQMD6jMpk0tODrlQjuBXg009DSJT5frv2q4rFNtgQKCAQEA1bQ0ysZL
+#            e0usPmJ7iyu34Ln1fLuN/M60DA02zQ8wWMloqBS+CVjby/IT+rwlDvjTzxcMOQnP
+#            6Nfp9LB8Oh+QIWZNheyDqKvyeGXgCiIHS4RGBTqZzzpE7w485oERXu6fl6/f7/pp
+#            C2881ynhKSaINfzTgMRu2S4lwqzDlhbrdTlXHEU8zP3Ww/cnR/fif4+KDczz86w6
+#            5qPKjDZreNfjUp6CTyGDoAgpqDs7983j/f9nOnpf6+JXdiIlvAk/B2LoDdrRuAHO
+#            iasT1kugtJFhwI48bdAHa2L4f5ivH48F0QCgq1n4aZUaGQoUuuTSezPgRs+FF5x5
+#            oLf/bUVN+HksMwKCAQEAxCYLX/guibnTf4jlslKSlFMv01B8GVSeWBNeyPo+A/O+
+#            PeWsTcgt/oZ8Ck7DZtKD7tNr78AdN360oE9n+3K7ESaTIjDH0iuCwzWkY7+ODarN
+#            N6IC/PxdP/HtSh8Sthcj3qWUAP7vTxzN58RoO6g08ctMz3cuy7H6zM1t9uj0jocx
+#            M+7WVlKX/qr2nFXZfCCij5/CZaNGp/AqweS95B8UWPvD6G9qL2vT89YvYlucaIAR
+#            j82mMjSd0ptkvs8GEW5bnnhL+BndvxFXpC/FLeWFnKfKuZ8Eqi62KOnFCqjnPq4e
+#            DwQ2JmSRh7INCO/rS94JDR/BeNTC9em0lfuOlF8tmQKCAQAKY5JVcUJmIg2jksIS
+#            x/NOd3vZrnx+l8Xk+Bd77IsbJd9ynF+IsMsupPwXqmHa0nnpjWNIupNi7GwxOwsv
+#            AC3Pkdue8RqNbp6A/+LeWz0jjLCivHCRxHFpdbW8NvYTOWKEy0YFspS8u5GnnB+Y
+#            Eol4pmvZzLLe2AF571Aq0b5smncDptIH3Sc9q5w7QW+/Z8j8VsRdSjgq0jecjWC4
+#            JTal45LOKgDuHLd5uDd4GohE5s+r5hsXqo857PsMox5vS32gfszHNz9FLg3u0wpi
+#            /NZVuBRz+jMCI3OVMGUDEb7kpDUrX1pWN6tnIDhVxZ39402544jC1xaKm6dNNptN
+#            wwZFAoIBAB7C8Km+XF4RHJA1wgAzXvWQDkIPr0axtJuPfh/6ztsD0OQYLuuL51qx
+#            cKaVL6Pig/pigdz5vhtD7cPucBpJJflMmWqVR+E4HavLr9pM4lRWYxTEfb97PIyY
+#            vmQPd3nDK0bxpMJ7OMCpfclJTid8+8Cn54Xp5Rbg9LpFxWchpajsntTMMiUbkubH
+#            nSFrfU4wOA5aObyC3MPdsHb0DqvGDATghxrezkJdoMHu50N/ponk+9wXnmblRZMP
+#            977M7OCy8/9oUlG4jMQ4TgxbyYqnIkstLWfq/mpKJRtJfjNrxchYujIUsQFYaFJl
+#            pBGwvrAJRFYgktEGXQT//+g9qWCvhJECggEACQSp+mS3Z0SlLFWXK64A+PxTUWso
+#            mnn+K6GAh+FlkXxIR9ABCtxyF9LSRfv1py918TSGPfrou5vNVKam7+1eAnIqhrmV
+#            pSc/1jK4/YBKZYruH8unIq2cmFcsDGecCDL5K7gcB4+a7w9jkNRDBsbwi4Z7+A75
+#            t7jsgXOYpnLeaHKwO4FLBhcgrlyDlHaCr6wbwkuChwZbS5Wk+S8na/bgyHzEv/PL
+#            Jin/IokAOFL9NzrfvIB+yhvc82fuDO/tszQ34S00VeeyDsxgS+ui1+cwgu5XyTPo
+#            tXc+VLKR7RZ5ch2TCJKob3ziqfpFab08s53q3ZfJ0hMA6FbYM4VeKTW2Tw==
+#            -----END RSA PRIVATE KEY-----
+          skip-ssl-validation: true
+          username: EmpressBoost
+          password: LMDan1207..
+      ####读取分支
+      label: master
+  #rabbitmq相关配置
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+#服务注册到eureka地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+
+##rabbitmq相关配置,暴露bus刷新配置的端点
+management:
+  endpoints: #暴露bus刷新配置的端点
+    web:
+      exposure:
+        include: 'bus-refresh'
